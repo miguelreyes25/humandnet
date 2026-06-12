@@ -1,0 +1,113 @@
+{
+  "id": "contpaqi_comercial_premium",
+  "name": "CONTPAQi Comercial Premium",
+
+  "informacion_basica": {
+    "developer": "CONTPAQi (Computación en Acción, S.A. de C.V.)",
+    "country_of_origin": "México",
+    "current_version": "Comercial Premium 10.x (10.1.1 line, released circa 2025) [uncertain]",
+    "license_model": "Propietario, código cerrado. Históricamente vendido como licencia perpetua 'tradicional'; CONTPAQi ha movido su estrategia comercial hacia el licenciamiento por suscripción anual, siendo el licenciamiento anual el esquema dominante y promovido para 2026 (las licencias perpetuas 'tradicionales' aún existen pero están en transición hacia el anual). Licenciamiento por usuario (asiento de red)."
+  },
+
+  "costo_tco": {
+    "license_price": "New annual license (Multi-RFC, 1 user): ~$10,490 MXN/year + IVA per 2026 lists (some distributors quote bundles in the $13,080-$15,670 MXN + IVA range; aggregators cite 'from $15,000 MXN'). Highest-priced tier of the line. [uncertain]",
+    "licensing_scheme": "CONTPAQi is migrating to annual subscription licensing for 2026; price lists separate 'licencia nueva' from 'renovacion'. The annual scheme bundles updates, SAT changes, new versions, unlimited CFDI stamping and help chat. A perpetual license still exists but annual is the promoted path. [uncertain]",
+    "implementation_cost": "Basic installation/configuration advertised as included with the annual license. Real implementation, migration, multi-branch setup, custom reports and SDK integrations are billed separately and scale with complexity (above ~20 concurrent terminals requires special implementation). [uncertain]",
+    "included_users": "1 usuario incluido en la licencia base.",
+    "additional_user_and_rfc_cost": "Additional network user (Multi-RFC, annual): ~$2,390-$2,590 MXN + IVA each per 2026 distributor lists. Additional RFCs: the Multi-RFC edition manages all RFCs from one installation at no extra per-RFC license cost (each RFC keeps its own database). [uncertain]",
+    "maintenance_renewal_cost": "Under annual licensing, renewal is an annual fee (lower than a new license) keeping updates, SAT changes, unlimited stamping and support active; lapsing stops updates and stamping. Exact amount varies by distributor. [uncertain]",
+    "hidden_costs": "Windows Server + SQL Server for multi-user/multi-branch; CONTPAQi Contabilidad license if accounting runs in-house; training; partner consulting for SDK integrations and custom reports; extra user seats; other CONTPAQi modules sold separately. [uncertain]",
+    "tco_1_3_years": "Illustrative 1-3 year TCO for a small multi-user Premium (annual model): Year 1 ~$20,000-$45,000 MXN + IVA; each subsequent year ~$12,000-$25,000 MXN + IVA; SDK projects, SQL infrastructure and CONTPAQi Contabilidad push it higher. [uncertain]"
+  },
+
+  "despliegue": {
+    "hosting": "On-premise (escritorio/cliente-servidor) por defecto; puede alojarse en un servidor Windows privado/nube o vía hosting en nube provisto por el partner (escritorio virtual). No hay app web SaaS multi-tenant nativa de CONTPAQi para este producto. El multisucursal usa un servidor central con puntos remotos consolidando datos.",
+    "hardware_requirements": "Windows PC/server with Microsoft SQL Server (Express for small installs, full SQL Server for larger/multi-branch and high-XML-volume); networked terminals on the same LAN/VPN as the server. [uncertain]",
+    "operating_system": "Microsoft Windows (escritorio y Windows Server); requiere backend de Microsoft SQL Server. No disponible para macOS/Linux de forma nativa.",
+    "mobile_app_availability": "No full native mobile app for Comercial Premium itself; mobility is achieved via complementary CONTPAQi tools/integrations and the SDK/third-party apps rather than a first-party mobile client. [uncertain]"
+  },
+
+  "funcionalidad_comercial": {
+    "sales": "Ciclo de venta comercial completo: cotizaciones, pedidos de venta, remisiones/notas de entrega, facturas, notas de crédito/débito; soporta tipos de documento CFDI de ingreso, egreso y traslado, recibos de honorarios y arrendamiento. Flujos de documentos y folios configurables.",
+    "purchasing": "Gestión de compras: órdenes de compra, documentos de proveedor, recepción de mercancías, recepción de CFDI de proveedores en el sistema.",
+    "inventory_warehouses": "Inventario multialmacén robusto: unidades de medida y peso, series, lotes, pedimentos, generación de códigos de barras y hasta 3 características de producto (p. ej., talla, color, estilo). Diseñado para manejar altos volúmenes de información.",
+    "point_of_sale": "Supports point-of-sale operation including remote POS points consolidating into a central server in multi-branch setups. [uncertain]",
+    "crm": "Basic customer/contact management within the commercial module; not a dedicated full CRM (no native advanced pipeline/marketing automation). [uncertain]",
+    "price_lists": "Múltiples listas de precios y políticas comerciales/reglas de descuento; configuración de precios por cliente y por producto.",
+    "document_bulk_load": "Premium has a noted limitation on bulk document loading versus Pro: its workflow is designed to operate documents directly within the system, so mass import is constrained and high-volume document creation is typically handled programmatically via the SDK. [uncertain]",
+    "xml_volume_multibranch_capacity": "Posicionado como el tier superior para alto volumen XML/fiscal y operación multisucursal: servidor central con sucursales/POS remotos consolidando datos en tiempo real, reporteo de alto volumen vía el Reporteador y backend SQL Server para sostener grandes cargas de transacciones/XML. Recomendado para operaciones que exceden ~20 terminales concurrentes (con implementación especial)."
+  },
+
+  "cumplimiento_fiscal_mx": {
+    "cfdi_40": "Soporte nativo de CFDI 4.0: emisión, recepción, validación, cancelación y almacenamiento de facturas electrónicas conforme a los requisitos del SAT. Los cambios fiscales/SAT se entregan mediante las actualizaciones incluidas en la licencia anual.",
+    "edition_required_for_mx_localization": "La localización fiscal mexicana viene integrada de forma nativa en el producto (es un producto mexicano); no se requiere una capa de localización de pago aparte. Premium es la edición superior de la línea e incluye el conjunto de funciones comercial+fiscal más completo, pero el cumplimiento CFDI 4.0 está presente en todas las ediciones Comercial.",
+    "timbrado_stamping": "Incluye timbrado ilimitado de CFDI dentro de la licencia anual usando la propia infraestructura de timbrado de CONTPAQi (sin necesidad de contrato de PAC externo). El timbrado y la cancelación también se exponen a través del SDK para automatización programática de documentos.",
+    "complementos": "Supports SAT complementos including Carta Porte, Pagos/REP and credit notes, plus standard income/expense/transfer document types. [uncertain]",
+    "addendas": "Supports addendas for commercial chains; specific formats are typically configured/extended by partners or via the SDK. [uncertain]",
+    "pac_provider_flexibility": "Ecosistema cerrado: el timbrado se provee a través de la propia infraestructura PAC de CONTPAQi incluida con la licencia, en vez de libre elección entre PAC de terceros. Es una ventaja controlada por el proveedor (sin cuota de PAC aparte) pero limita la flexibilidad de proveedor de PAC.",
+    "sat_connection": "Connects to SAT-related fiscal processes (CFDI issuance/reception/cancellation, XML validation, storage). Electronic accounting, DIOT and SAT downloads/pólizas are primarily handled by CONTPAQi Contabilidad, to which Premium hands off entries. [uncertain]"
+  },
+
+  "contabilidad": {
+    "accounting_integration": "Sin contabilidad de mayor (general ledger) completa dentro de Comercial Premium; configura segmentos de cuenta contable (segmentos generales y adicionales/variables) y genera pólizas de las operaciones comerciales para ser consumidas por un sistema contable dedicado.",
+    "accounting_handoff_to_contpaqi_contabilidad": "Integración nativa y estrecha: una acción 'Contabilizar' y el módulo de Contabilización/interfaz generan pólizas contables (ventas, pagos, etc.) a partir de los documentos comerciales y las sincronizan directamente en CONTPAQi Contabilidad con un solo clic, evitando la doble captura. Es un lock-in/ventaja de ecosistema clave que favorece fuertemente mantener la contabilidad dentro de CONTPAQi."
+  },
+
+  "escalabilidad_modulos": {
+    "available_modules": "Parte de la suite CONTPAQi: se integra con CONTPAQi Contabilidad, Bancos, Nóminas, Factura Electrónica/Xml en Línea y otros. Dentro de Premium: inventario multialmacén, ciclo de documentos completo, Reporteador, multisucursal, multi-RFC. Los demás módulos de la suite se licencian aparte.",
+    "extensibility": "Altamente extensible en el tier superior vía el SDK y el acceso directo a la base de datos SQL, habilitando desarrollos a medida, integraciones ERP/e-commerce/web y automatización que los tiers inferiores no pueden hacer.",
+    "sdk_api_integration_tier_gating": "El acceso al SDK está reservado solo al tier Premium — Start y Pro no incluyen el SDK. El SDK de CONTPAQi Comercial es una librería basada en COM consumida desde aplicaciones Windows .NET/C# (Consola, WinForms, WPF) y soporta login, apertura de empresas, lectura/creación/edición de catálogos, creación de documentos, timbrado y cancelación. Es la ruta estándar para integración empresarial y desarrollos avanzados; el trabajo programático también puede hacerse accediendo directamente a la base de datos SQL. (En contraste, Odoo expone su API ORM/XML-RPC/JSON-RPC en todos los tiers, incluido Community.)",
+    "app_marketplace": "No formal first-party app marketplace; extensions come through the partner/distributor network and third-party developers building on the SDK. [uncertain]"
+  },
+
+  "soporte_ecosistema": {
+    "technical_support": "Soporte oficial de CONTPAQi incluido con la licencia anual (chat de ayuda CONTPAQi por 1 año), más el soporte de primera línea entregado por el distribuidor/partner autorizado que vendió la licencia.",
+    "partner_network": "Red de distribuidores/partners autorizados muy grande en todo México (niveles Platinum/Oro/etc.), que provee venta, implementación, capacitación y servicios de desarrollo con SDK a nivel nacional.",
+    "community": "Active Mexican professional/accountant and developer community; third-party SDK wrappers and tutorials exist, though smaller and more vendor-centric than a global open-source community. [uncertain]",
+    "documentation": "Extensa documentación en español: cartas técnicas, manuales, base de conocimiento y referencia del SDK publicada por CONTPAQi.",
+    "market_share_installed_base_mx": "CONTPAQi is one of the dominant administrative/fiscal software vendors in Mexico with a very large installed base, especially among SMBs and accounting firms. Premium is the higher-end tier within that base. [uncertain]"
+  },
+
+  "integraciones": {
+    "api": "Integration is via the COM-based SDK (.NET/C#) and direct SQL Server access rather than a modern open REST/ORM API; third parties also offer REST API wrappers over the SDK. [uncertain]",
+    "ecommerce": "E-commerce integration is achievable through the SDK or third-party connectors, not via a built-in native e-commerce module. [uncertain]",
+    "third_party_connectors": "Connectors to e-commerce, external POS, Power BI/dashboards and custom systems are built on top of SDK/SQL access; banking and other integrations are handled within the broader CONTPAQi suite. [uncertain]"
+  },
+
+  "estrategico": {
+    "vendor_lock_in_data_portability": "Lock-in significativo con el proveedor: producto propietario de código cerrado, esquema SQL propietario, timbrado/PAC controlado por CONTPAQi y una fuerte atracción a mantener la contabilidad en CONTPAQi Contabilidad vía el hand-off nativo de pólizas. Los datos son técnicamente extraíbles mediante el SDK, consultas SQL y archivos XML/CFDI, pero no hay formato estándar abierto y migrar fuera de la suite es no trivial. Contrasta con el código open-source y la API/portabilidad de datos abierta de Odoo.",
+    "mexico_market_maturity": "Extremadamente maduro y construido a propósito para el mercado mexicano: CFDI 4.0 nativo, cumplimiento SAT, Carta Porte, addendas, Multi-RFC y timbrado integrado, respaldado por un profundo ecosistema de partners mexicanos. El ajuste fiscal mexicano es una fortaleza central."
+  },
+
+  "usabilidad": {
+    "learning_curve": "Moderate; familiar to the large base of Mexican CONTPAQi users/accountants, but the Premium feature breadth, multi-branch and SDK extensions add complexity for advanced setups. [uncertain]",
+    "interface": "Traditional Windows desktop client interface; functional and dense rather than modern web UI, consistent with the rest of the CONTPAQi suite. [uncertain]"
+  },
+
+  "uncertain": [
+    "current_version",
+    "license_price",
+    "licensing_scheme",
+    "implementation_cost",
+    "additional_user_and_rfc_cost",
+    "maintenance_renewal_cost",
+    "hidden_costs",
+    "tco_1_3_years",
+    "hardware_requirements",
+    "mobile_app_availability",
+    "point_of_sale",
+    "crm",
+    "document_bulk_load",
+    "complementos",
+    "addendas",
+    "sat_connection",
+    "app_marketplace",
+    "community",
+    "market_share_installed_base_mx",
+    "api",
+    "ecommerce",
+    "third_party_connectors",
+    "learning_curve",
+    "interface"
+  ]
+}

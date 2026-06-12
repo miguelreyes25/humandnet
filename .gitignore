@@ -1,0 +1,14 @@
+# Claude
+.claude/
+.superpowers/
+
+# Embedded repos / skills
+deep-research-skills/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp

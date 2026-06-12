@@ -1,0 +1,27 @@
+# Outline de investigación — items + configuración de ejecución
+topic: "Comparativa Odoo Community vs CONTPAQi Comercial (Start/Pro/Premium) vs Hôlos ERP"
+
+items:
+  - id: odoo_community
+    name: "Odoo Community Edition"
+    note: "ERP open-source de Odoo S.A. (Bélgica). Modular. Localización MX (CFDI) por comunidad/terceros, no oficial en este tier."
+  - id: contpaqi_comercial_start
+    name: "CONTPAQi Comercial Start"
+    note: "Tier de entrada de la línea CONTPAQi Comercial."
+  - id: contpaqi_comercial_pro
+    name: "CONTPAQi Comercial Pro"
+    note: "Tier intermedio de la línea CONTPAQi Comercial."
+  - id: contpaqi_comercial_premium
+    name: "CONTPAQi Comercial Premium"
+    note: "Tier superior de CONTPAQi Comercial. Único con acceso a SDK; alta carga XML y manejo multisucursal."
+  - id: holos_erp
+    name: "Hôlos ERP (Hum&Net)"
+    note: "ERP de Hum&Net (empresa mexicana de software, partner CONTPAQi Platinum)."
+
+execution:
+  batch_size: 5          # agentes en paralelo
+  items_per_agent: 1     # un ítem por agente
+  output_dir: ./results
+
+time_range: "últimos 12 meses"
+current_date: "2026-06-11"

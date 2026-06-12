@@ -1,0 +1,107 @@
+{
+  "item_id": "contpaqi_comercial_start",
+  "item_name": "CONTPAQi Comercial Start",
+
+  "informacion_basica": {
+    "developer": "Computación en Acción, S.A. de C.V. (CONTPAQi), empresa de software mexicana. CONTPAQi Comercial Start es el tier de entrada de la línea de producto CONTPAQi Comercial.",
+    "country_of_origin": "México",
+    "current_version": "CONTPAQi Comercial Start/Pro serie 8.x (p. ej., 8.2.2 liberada en 2024 con Carta Porte 3.1). Las ediciones Start y Pro comparten el mismo binario del programa; el tier solo cambia qué módulos se desbloquean. [uncertain]",
+    "license_model": "Propietario, código cerrado. Se vende bajo suscripción anual (Licenciamiento Anual) que incluye actualizaciones automáticas, soporte oficial de CONTPAQi y nuevas versiones sin costo extra. También existe una opción mensual. CONTPAQi migró su línea de escritorio a licenciamiento anual (ya no perpetuo). Disponible en variantes mono-RFC (una empresa) y multi-RFC (multiempresa)."
+  },
+
+  "costo_tco": {
+    "license_price": "Annual license in MXN + IVA. Start is the cheapest tier, with new-license list prices roughly MXN 4,000-7,000/year + IVA depending on mono-RFC vs multi-RFC (2026 list). Exact figure not confirmed. [uncertain]",
+    "licensing_scheme": "Licenciamiento anual (Licenciamiento Anual), renovado cada año; también existe una opción de licenciamiento mensual. La lista de precios pública 2026 de CONTPAQi separa explícitamente 'licencia nueva' de 'renovación/actualización', con la renovación a un precio menor que una licencia nueva. Los usuarios y RFC solo pueden ampliarse durante la vigencia de la licencia. Refleja la migración más amplia de CONTPAQi en 2026 de sus productos de escritorio a suscripción anual.",
+    "implementation_cost": "Not bundled in the license. Initial setup is performed by the customer or an authorized CONTPAQi distributor; cost varies. Start is designed for simple self-service setup, so implementation cost is generally low. [uncertain]",
+    "included_users": "Single concurrent network user included in the base license; additional simultaneous users require additional network-user licenses. [uncertain]",
+    "additional_user_and_rfc_cost": "Additional network users sold separately, each allowing one more simultaneous user, priced in MXN + IVA per user/year. Mono-RFC supports one RFC; multi-RFC lets you operate multiple RFCs without per-RFC licenses, with unlimited free CFDI folios. Exact figures not confirmed. [uncertain]",
+    "maintenance_renewal_cost": "Annual renewal required to keep updates, support and stamping active; renewal priced below a new license in the 2026 list. Exact MXN figure not confirmed. [uncertain]",
+    "hidden_costs": "Potential additional costs: additional network users, the multi-RFC variant, training from partners, optional CONTPAQi Contabilidad license, CONTPAQi Bancos integration, and Windows infrastructure. A 15% multi-purchase discount applies when buying 2+ annual desktop systems. [uncertain]",
+    "tco_1_3_years": "Low relative to ERP suites. A rough 3-year TCO for single-user Start is dominated by 3 annual subscriptions plus optional users and partner setup; estimated low tens of thousands of MXN over 3 years for a small business. [uncertain]"
+  },
+
+  "despliegue": {
+    "hosting": "Aplicación de escritorio on-premise (Windows). Puede alojarse en una PC/servidor local o accederse vía un servicio de escritorio hospedado/nube que ofrecen algunos distribuidores, pero el producto en sí es un sistema de escritorio Windows, no SaaS nativo.",
+    "hardware_requirements": "Standard Windows PC/server; multi-user uses a shared database server on the LAN. Specific minimums per official technical card. [uncertain]",
+    "operating_system": "Microsoft Windows (escritorio y Windows Server). Versiones anteriores cubrían avisos de compatibilidad con Windows 7/8/Server 2012; las versiones actuales apuntan a las ediciones de Windows con soporte.",
+    "mobile_app_availability": "No dedicated full mobile app for the Start desktop edition; it is a Windows desktop product. Mobile/remote access only via hosted-desktop arrangements. [uncertain]"
+  },
+
+  "funcionalidad_comercial": {
+    "sales": "Sí. Soporta el ciclo completo de documentos comerciales: cotizaciones, pedidos, remisiones, facturas de venta y devoluciones. Genera CFDI 4.0 desde tickets/documentos de venta.",
+    "purchasing": "Sí. Soporta documentos de compra (órdenes de compra, compras y devoluciones) y gestión de proveedores.",
+    "inventory_warehouses": "Control de inventario básico con gestión de almacenes, códigos alternos y códigos de proveedor. El control de inventario detallado como series y lotes es una función del tier Pro y no se incluye en Start.",
+    "point_of_sale": "Sí. Punto de venta integrado con soporte de lector de código de barras, múltiples formas de pago, cortes de caja, inventario en tiempo real y CFDI 4.0 con un clic desde un ticket de venta. El POS es una fortaleza central del tier Start.",
+    "crm": "Limited. Basic customer/catalog management; advanced customer management with accounts receivable is a Pro capability. No full CRM. [uncertain]",
+    "price_lists": "Sí. Múltiples listas de precios, más promociones y descuentos por cliente.",
+    "document_bulk_load": "Not a Start strength. Standard data entry is document-by-document. (The bulk-load limitation called out for Premium vs Pro does not apply to Start.) [uncertain]",
+    "xml_volume_multibranch_capacity": "Diseñado para bajo volumen XML/fiscal y pequeños negocios de una sola ubicación. La alta carga XML/fiscal y el manejo multisucursal son capacidades del tier Premium; Start no apunta a escenarios multisucursal ni de alto volumen. Los folios CFDI son ilimitados."
+  },
+
+  "cumplimiento_fiscal_mx": {
+    "cfdi_40": "Sí. Emisión nativa de CFDI 4.0 (facturas, REP/recibos de pago, Carta Porte, comprobantes de egreso, notas de crédito), generados directamente y conformes con los requisitos del SAT. Folios ilimitados sin costo.",
+    "edition_required_for_mx_localization": "La localización fiscal mexicana es nativa y viene integrada en todos los tiers de CONTPAQi Comercial, incluido Start; no está reservada a un tier de pago superior. CONTPAQi es un producto exclusivamente mexicano construido a propósito para el cumplimiento SAT/CFDI.",
+    "timbrado_stamping": "Timbrado nativo integrado en el sistema, procesado a través del propio ecosistema PAC de CONTPAQi. Folios ilimitados sin costo extra. Aplican validaciones automáticas del PAC (claves del catálogo SAT, códigos postales, placas de vehículos para Carta Porte).",
+    "complementos": "Soporta complementos del SAT incluyendo Carta Porte (versión 3.1, vigente desde el 17 de julio de 2024) y Pagos/REP (recibo electrónico de pago), así como notas de crédito y documentos de egreso, todos como CFDI 4.0.",
+    "addendas": "Addenda support for commercial chains is available via configuration. Breadth at the Start tier not fully confirmed. [uncertain]",
+    "pac_provider_flexibility": "Baja flexibilidad: el timbrado está atado al propio ecosistema PAC integrado de CONTPAQi en vez de permitir libre elección de un PAC externo. Es parte del modelo de ecosistema cerrado de CONTPAQi.",
+    "sat_connection": "El cumplimiento fiscal/SAT para emisión (CFDI 4.0, complementos) es nativo. La contabilidad electrónica completa, la DIOT y la generación de pólizas se logran integrando con CONTPAQi Contabilidad; Start integra/exporta las pólizas a CONTPAQi Contabilidad en vez de realizar contabilidad electrónica por sí mismo."
+  },
+
+  "contabilidad": {
+    "accounting_integration": "Sin módulo contable completo dentro de Start. Se integra con CONTPAQi Bancos (cuentas por cobrar/pagar autoactualizadas) y con CONTPAQi Contabilidad para el cumplimiento de contabilidad electrónica. Incluye tableros de CONTPAQi Business Intelligence para indicadores del negocio.",
+    "accounting_handoff_to_contpaqi_contabilidad": "Sí — exportación/integración nativa de pólizas directamente a CONTPAQi Contabilidad. Este hand-off estrecho dentro del mismo proveedor es una ventaja clave de ecosistema (y factor de lock-in) de la suite CONTPAQi, disponible desde el tier Start."
+  },
+
+  "escalabilidad_modulos": {
+    "available_modules": "Start desbloquea un subconjunto básico del programa compartido Comercial Start/Pro: POS, documentos de venta/compra, inventario básico de almacén, múltiples listas de precios, CFDI 4.0/timbrado, tableros de Business Intelligence e integración con CONTPAQi Bancos y Contabilidad. Los módulos avanzados (series/lotes, gestión de clientes con cuentas por cobrar, comisiones por vendedor, reportes ejecutivos más profundos, proyectos) están reservados para Pro; el alto volumen/multisucursal y el SDK para Premium.",
+    "extensibility": "Limitada en el tier Start. Sin acceso a SDK programático. La personalización se confina en gran medida a la configuración; la extensibilidad/integración más profunda requiere subir a Premium (SDK).",
+    "sdk_api_integration_tier_gating": "Sin SDK/integración programática en el tier Start. El SDK de CONTPAQi Comercial es exclusivo del tier Premium, que es la edición usada para proyectos de integración empresarial y desarrollo avanzado. Start (y Pro) no pueden acceder al SDK.",
+    "app_marketplace": "No open app marketplace. Extensions come through CONTPAQi's own suite and authorized partners rather than a self-service app store. [uncertain]"
+  },
+
+  "soporte_ecosistema": {
+    "technical_support": "El soporte técnico oficial de CONTPAQi se incluye con la licencia anual activa (la suscripción incluye soporte, actualizaciones automáticas y nuevas versiones). El soporte del día a día también se entrega a través de la red de distribuidores/partners autorizados.",
+    "partner_network": "Amplia red nacional de distribuidores y partners CONTPAQi autorizados en todo México (incluidos niveles Platinum/Gold), que proveen venta, implementación, capacitación y soporte.",
+    "community": "Large installed user base and active accountant/distributor community in Mexico; CONTPAQi publishes knowledge bases, technical cards and blogs. No open-source developer community. [uncertain]",
+    "documentation": "Extensa documentación oficial en español: manuales, cartas técnicas, base de conocimiento (conocimiento.contpaqi) y guías de blog que cubren funciones, CFDI y complementos.",
+    "market_share_installed_base_mx": "CONTPAQi es uno de los proveedores dominantes de software administrativo/contable en México, con una base instalada muy grande, lo que lo convierte en un estándar de facto entre PyMEs y contadores; el tier Comercial Pro se describe como el más vendido de la línea, y Start atiende el segmento de entrada/pequeño negocio. Alta disponibilidad de talento entre contadores/distribuidores mexicanos."
+  },
+
+  "integraciones": {
+    "api": "Sin API/SDK pública en el tier Start (el SDK es exclusivo de Premium). La integración se logra principalmente a través de la suite nativa CONTPAQi (Bancos, Contabilidad) en vez de una interfaz programática abierta.",
+    "ecommerce": "No native e-commerce integration in the base Start product; any connection would rely on third-party/partner connectors. [uncertain]",
+    "third_party_connectors": "Primary connectivity is within the CONTPAQi ecosystem (Bancos, Contabilidad). Broader third-party connectors are limited at this tier and typically require partner solutions. [uncertain]"
+  },
+
+  "estrategico": {
+    "vendor_lock_in_data_portability": "Alto lock-in con el proveedor. Producto Windows propietario de código cerrado en suscripción anual, con un formato de datos propietario y un ecosistema PAC cerrado; el hand-off nativo profundo a CONTPAQi Contabilidad/Bancos refuerza la permanencia dentro de la suite. La portabilidad de datos se limita a exportaciones de CFDI XML y exportaciones estándar de reportes/archivos en vez de acceso abierto a la base de datos (sin SDK en el tier Start).",
+    "mexico_market_maturity": "Muy maduro y construido a propósito para el mercado mexicano. CFDI 4.0 nativo, complementos (Carta Porte 3.1, REP), cumplimiento SAT e integración estrecha con la contabilidad electrónica mexicana vía CONTPAQi Contabilidad. Diseñado exclusivamente para los requisitos fiscales/comerciales mexicanos."
+  },
+
+  "usabilidad": {
+    "learning_curve": "Baja. Start está posicionado para pequeños negocios y operaciones de 1-2 empleados; su flujo simple orientado a POS y facturación lo hace el tier más fácil de adoptar.",
+    "interface": "Traditional Windows desktop interface consistent across the CONTPAQi Comercial line; functional and familiar to Mexican users, though not a modern web UI. [uncertain]"
+  },
+
+  "uncertain": [
+    "current_version",
+    "license_price",
+    "implementation_cost",
+    "included_users",
+    "additional_user_and_rfc_cost",
+    "maintenance_renewal_cost",
+    "hidden_costs",
+    "tco_1_3_years",
+    "hardware_requirements",
+    "mobile_app_availability",
+    "crm",
+    "document_bulk_load",
+    "addendas",
+    "app_marketplace",
+    "community",
+    "ecommerce",
+    "third_party_connectors",
+    "interface"
+  ]
+}

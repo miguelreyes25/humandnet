@@ -1,0 +1,198 @@
+# Definición de campos de comparación
+# detail_level: brief -> moderate -> detailed
+
+categories:
+
+  informacion_basica:
+    description: "Identidad y naturaleza del producto"
+    fields:
+      - name: developer
+        description: "Empresa desarrolladora"
+        detail_level: brief
+      - name: country_of_origin
+        description: "País de origen"
+        detail_level: brief
+      - name: current_version
+        description: "Versión vigente y fecha"
+        detail_level: brief
+      - name: license_model
+        description: "Open-source vs propietario; perpetua vs suscripción"
+        detail_level: moderate
+
+  costo_tco:
+    description: "Costo total de propiedad — ÉNFASIS"
+    fields:
+      - name: license_price
+        description: "Precio de licencia (MXN), por tier/usuario"
+        detail_level: detailed
+      - name: licensing_scheme
+        description: "Esquema de licenciamiento: anual vs perpetuo. CONTPAQi migra a anual en 2026 y separa licencia nueva vs renovación"
+        detail_level: detailed
+      - name: implementation_cost
+        description: "Costo de implementación/configuración inicial"
+        detail_level: detailed
+      - name: included_users
+        description: "Usuarios incluidos en la licencia base"
+        detail_level: moderate
+      - name: additional_user_and_rfc_cost
+        description: "Costo de usuarios de red adicionales y, en CONTPAQi, RFCs adicionales"
+        detail_level: detailed
+      - name: maintenance_renewal_cost
+        description: "Costo de mantenimiento/renovación anual"
+        detail_level: moderate
+      - name: hidden_costs
+        description: "Costos ocultos (capacitación, soporte, módulos extra, hosting)"
+        detail_level: moderate
+      - name: tco_1_3_years
+        description: "Estimación de costo total a 1-3 años"
+        detail_level: detailed
+
+  despliegue:
+    description: "Modelo de despliegue y requisitos técnicos"
+    fields:
+      - name: hosting
+        description: "On-premise / nube / híbrido"
+        detail_level: moderate
+      - name: hardware_requirements
+        description: "Requisitos de hardware/servidor"
+        detail_level: brief
+      - name: operating_system
+        description: "Sistemas operativos soportados"
+        detail_level: brief
+      - name: mobile_app_availability
+        description: "Disponibilidad de app móvil"
+        detail_level: brief
+
+  funcionalidad_comercial:
+    description: "Capacidades operativas de administración comercial"
+    fields:
+      - name: sales
+        description: "Gestión de ventas y cotizaciones"
+        detail_level: moderate
+      - name: purchasing
+        description: "Gestión de compras"
+        detail_level: moderate
+      - name: inventory_warehouses
+        description: "Inventarios y almacenes (multi-almacén)"
+        detail_level: moderate
+      - name: point_of_sale
+        description: "Punto de venta (POS)"
+        detail_level: brief
+      - name: crm
+        description: "Gestión de relaciones con clientes"
+        detail_level: brief
+      - name: price_lists
+        description: "Listas de precios y políticas comerciales"
+        detail_level: brief
+      - name: document_bulk_load
+        description: "Soporte de carga masiva de documentos (limitación notada en Premium vs Pro)"
+        detail_level: moderate
+      - name: xml_volume_multibranch_capacity
+        description: "Capacidad de volumen XML/fiscal y manejo multisucursal"
+        detail_level: moderate
+
+  cumplimiento_fiscal_mx:
+    description: "Cumplimiento fiscal mexicano — ÉNFASIS"
+    fields:
+      - name: cfdi_40
+        description: "Soporte de CFDI 4.0"
+        detail_level: detailed
+      - name: edition_required_for_mx_localization
+        description: "Si la localización MX oficial requiere tier de pago (Odoo Enterprise) o módulo comunidad/terceros"
+        detail_level: detailed
+      - name: timbrado_stamping
+        description: "Mecanismo de timbrado e integración del PAC"
+        detail_level: detailed
+      - name: complementos
+        description: "Complementos: Carta Porte (3.x), Pagos/REP, etc."
+        detail_level: detailed
+      - name: addendas
+        description: "Soporte de addendas (cadenas comerciales)"
+        detail_level: moderate
+      - name: pac_provider_flexibility
+        description: "Flexibilidad/elección de proveedor PAC vs ecosistema propio"
+        detail_level: moderate
+      - name: sat_connection
+        description: "Conexión SAT: contabilidad electrónica, DIOT, descargas"
+        detail_level: detailed
+
+  contabilidad:
+    description: "Integración contable"
+    fields:
+      - name: accounting_integration
+        description: "Integración o módulo contable propio"
+        detail_level: moderate
+      - name: accounting_handoff_to_contpaqi_contabilidad
+        description: "Exportación nativa de pólizas a CONTPAQi Contabilidad (lock-in/ventaja de ecosistema)"
+        detail_level: detailed
+
+  escalabilidad_modulos:
+    description: "Extensibilidad y crecimiento"
+    fields:
+      - name: available_modules
+        description: "Catálogo de módulos/funciones disponibles"
+        detail_level: moderate
+      - name: extensibility
+        description: "Capacidad de personalización/desarrollo"
+        detail_level: moderate
+      - name: sdk_api_integration_tier_gating
+        description: "Qué tier desbloquea integración programática (CONTPAQi limita SDK a Premium; Odoo expone ORM/API en todo tier)"
+        detail_level: detailed
+      - name: app_marketplace
+        description: "Marketplace de apps/complementos"
+        detail_level: brief
+
+  soporte_ecosistema:
+    description: "Soporte, comunidad y madurez"
+    fields:
+      - name: technical_support
+        description: "Soporte técnico oficial"
+        detail_level: moderate
+      - name: partner_network
+        description: "Red de partners/distribuidores en México"
+        detail_level: moderate
+      - name: community
+        description: "Comunidad de usuarios/desarrolladores"
+        detail_level: brief
+      - name: documentation
+        description: "Calidad y disponibilidad de documentación"
+        detail_level: brief
+      - name: market_share_installed_base_mx
+        description: "Cuota de mercado / base instalada en México (proxy de madurez y disponibilidad de talento)"
+        detail_level: moderate
+
+  integraciones:
+    description: "Conectividad con terceros"
+    fields:
+      - name: api
+        description: "API/ORM para integraciones"
+        detail_level: moderate
+      - name: ecommerce
+        description: "Integración con e-commerce"
+        detail_level: brief
+      - name: third_party_connectors
+        description: "Conectores con terceros (bancos, marketplaces, etc.)"
+        detail_level: brief
+
+  estrategico:
+    description: "Consideraciones de largo plazo"
+    fields:
+      - name: vendor_lock_in_data_portability
+        description: "Lock-in del proveedor vs portabilidad de datos (open-source vs formato propietario)"
+        detail_level: detailed
+      - name: mexico_market_maturity
+        description: "Madurez y adaptación al mercado mexicano"
+        detail_level: moderate
+
+  usabilidad:
+    description: "Experiencia de uso"
+    fields:
+      - name: learning_curve
+        description: "Curva de aprendizaje"
+        detail_level: brief
+      - name: interface
+        description: "Calidad de la interfaz de usuario"
+        detail_level: brief
+
+# Campos con valor incierto — se autocompletan en la fase de investigación profunda
+uncertain: []

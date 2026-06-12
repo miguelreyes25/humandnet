@@ -1,0 +1,117 @@
+{
+  "informacion_basica": {
+    "developer": "HumandNet / Compromiso Humano (empresa mexicana de software empresarial con 30+ años de experiencia; CONTPAQi Platinum Business Partner). Marcas usadas: Hum&Net, Compromiso Humano. Sitios: compromisohumano.com, humandnet.com, holoserp.app",
+    "country_of_origin": "México",
+    "current_version": "No public version/release number disclosed; delivered as a continuously updated cloud SaaS platform (holoserp.app) [uncertain]",
+    "license_model": "Proprietary, subscription-based (SaaS / cloud). Not open-source. Sold per quote; built on and bundling licensed CONTPAQi products. [uncertain]"
+  },
+  "costo_tco": {
+    "license_price": "Not publicly published. Pricing is quote-based and depends on selected apps/modules and CONTPAQi licenses bundled. [uncertain]",
+    "licensing_scheme": "Cloud subscription model (recurring). As it embeds CONTPAQi products, the CONTPAQi annual-licensing migration (2026) likely applies to those components. Exact terms not published. [uncertain]",
+    "implementation_cost": "Not published. HumandNet positions itself as an implementation/consulting partner, so a separate onboarding fee is expected. [uncertain]",
+    "included_users": "Not published; defined per contracted plan/quote. [uncertain]",
+    "additional_user_and_rfc_cost": "Not published. Additional users/RFCs priced per quote/CONTPAQi licensing rules. [uncertain]",
+    "maintenance_renewal_cost": "Bundled into the cloud subscription; CONTPAQi component renewals follow CONTPAQi terms. [uncertain]",
+    "hidden_costs": "Likely additional costs for implementation/consulting, training, extra CONTPAQi licenses, PAC stamping credits, and add-on apps. Hosting is included (cloud). [uncertain]",
+    "tco_1_3_years": "Cannot be estimated from public data; quote required. [uncertain]"
+  },
+  "despliegue": {
+    "hosting": "Nube (SaaS, 'In Cloud'). Se accede vía navegador web (holoserp.app). También ofrece CONTPAQi Escritorio Virtual para ejecutar los sistemas de escritorio CONTPAQi desde la nube/navegador.",
+    "hardware_requirements": "Minimal client-side; web browser and internet connection (cloud-hosted). No customer server required for the SaaS apps. [uncertain]",
+    "operating_system": "OS-independent for the web apps (browser-based); CONTPAQi Escritorio Virtual delivers Windows-based CONTPAQi systems via the cloud. [uncertain]",
+    "mobile_app_availability": "Accessible from any device/browser per vendor; no dedicated native mobile app confirmed. [uncertain]"
+  },
+  "funcionalidad_comercial": {
+    "sales": "Commercial management (sales, invoicing, accounts receivable) offered, integrated within the platform/CONTPAQi ecosystem. Specifics not detailed publicly. [uncertain]",
+    "purchasing": "Purchasing/accounts-payable management offered as part of the integrated processes. Details not published. [uncertain]",
+    "inventory_warehouses": "Inventory management is part of the commercial operations covered; multi-warehouse support not explicitly documented. [uncertain]",
+    "point_of_sale": "Point of sale not explicitly documented; likely covered via CONTPAQi Comercial integration. [uncertain]",
+    "crm": "CRM not explicitly listed as a Holos module; platform emphasizes ERP, finance, and organizational/HR development. [uncertain]",
+    "price_lists": "Price lists likely supported via the commercial module (CONTPAQi Comercial lineage), but not explicitly documented. [uncertain]",
+    "document_bulk_load": "Bulk/automated document handling indicated (XML processing, mass voucher generation). Commercial bulk load not explicitly documented. [uncertain]",
+    "xml_volume_multibranch_capacity": "Apps process CFDI XML at volume; multi-branch handling not explicitly documented. [uncertain]"
+  },
+  "cumplimiento_fiscal_mx": {
+    "cfdi_40": "Yes. Platform performs automatic validation/classification of CFDI documents; CFDI 4.0 supported via its CONTPAQi-based stack. [uncertain]",
+    "edition_required_for_mx_localization": "Mexican fiscal localization is native (built on CONTPAQi); no separate paid localization tier. [uncertain]",
+    "timbrado_stamping": "Stamping handled through the CONTPAQi ecosystem / PAC services. Exact mechanism not detailed publicly. [uncertain]",
+    "complementos": "CFDI complements (Pagos/REP, Carta Porte) supported via the underlying CONTPAQi components. Not explicitly enumerated for Holos. [uncertain]",
+    "addendas": "Addenda support not explicitly documented; typically available via CONTPAQi components. [uncertain]",
+    "pac_provider_flexibility": "Tied to the CONTPAQi PAC/stamping ecosystem rather than open multi-PAC choice. [uncertain]",
+    "sat_connection": "SAT-oriented capabilities present: CFDI XML download/processing, electronic accounting, declarations, and discrepancy detection (Analiza). Via CONTPAQi Contabilidad. [uncertain]"
+  },
+  "contabilidad": {
+    "accounting_integration": "Fuerte integración contable nativa. Las finanzas/contabilidad se entregan a través de CONTPAQi Contabilidad y CONTPAQi Tesorería (apps 'Contabiliza', 'Analiza', 'Contabilidad'): procesamiento de XML, pólizas recurrentes, control de IVA, declaraciones, reportes.",
+    "accounting_handoff_to_contpaqi_contabilidad": "Nativo/integrado. La plataforma está centrada en CONTPAQi Contabilidad y Tesorería (HumandNet es partner CONTPAQi Platinum), por lo que las pólizas/asientos fluyen directamente hacia CONTPAQi Contabilidad. Este acoplamiento profundo con CONTPAQi es una ventaja central de ecosistema."
+  },
+  "escalabilidad_modulos": {
+    "available_modules": "Suite integrada de apps que cubre finanzas/contabilidad (Contabilidad, Contabiliza, Tesorería), análisis fiscal (Analiza), CONTPAQi Escritorio Virtual (escritorio en nube), operaciones comerciales/ERP y Desarrollo Organizacional / Talento Humano. Comercializada como totalmente integrada, sin necesidad de interfaces entre softwares.",
+    "extensibility": "Delivered/configured by HumandNet consultants; workflows customizable per vendor. No public self-service developer extensibility documented. [uncertain]",
+    "sdk_api_integration_tier_gating": "No public SDK/API tiering documented; integration handled by the vendor/partner and the CONTPAQi ecosystem. [uncertain]",
+    "app_marketplace": "No public app marketplace; apps provided/curated by HumandNet within the platform. [uncertain]"
+  },
+  "soporte_ecosistema": {
+    "technical_support": "Vendor-provided support through HumandNet/Compromiso Humano: certified consultants and a distributor network serving 5,000+ clients (per vendor). [uncertain]",
+    "partner_network": "Respaldado por la red de distribuidores/consultores de HumandNet y el canal de partners CONTPAQi en México. Distribuidores CONTPAQi de terceros (p. ej., Meraki Consultores, Alyan Consultores) también promueven Holos.",
+    "community": "No dedicated public developer/user community; relies on partner-led support (closed ecosystem). [uncertain]",
+    "documentation": "Limited public product documentation; marketing-level pages on holoserp.app/humandnet.com. [uncertain]",
+    "market_share_installed_base_mx": "Niche product; HumandNet cites a network serving 5,000+ clients, but Holos-specific installed base not published. Much smaller footprint than CONTPAQi or Odoo. [uncertain]"
+  },
+  "integraciones": {
+    "api": "No public API/ORM documentation. Integration primarily within its own apps and the CONTPAQi ecosystem. [uncertain]",
+    "ecommerce": "No e-commerce integration documented publicly. [uncertain]",
+    "third_party_connectors": "Connectors centered on the CONTPAQi ecosystem and CFDI/SAT data; banking/marketplace connectors not documented. [uncertain]"
+  },
+  "estrategico": {
+    "vendor_lock_in_data_portability": "High lock-in: proprietary cloud SaaS tightly coupled to the CONTPAQi ecosystem and the HumandNet partner. Data portability relies on CFDI XML and CONTPAQi formats rather than open standards. [uncertain]",
+    "mexico_market_maturity": "Purpose-built for Mexico by a 30+ year Mexican firm and CONTPAQi Platinum partner; strong fiscal/SAT and CONTPAQi alignment. Product itself is comparatively young/niche versus CONTPAQi and Odoo. [uncertain]"
+  },
+  "usabilidad": {
+    "learning_curve": "Marketed as simplifying operations; real-time, browser-based. Actual learning curve not independently documented. [uncertain]",
+    "interface": "Modern, clean web/cloud interface accessible from any browser/device per vendor. [uncertain]"
+  },
+  "uncertain": [
+    "current_version",
+    "license_model",
+    "license_price",
+    "licensing_scheme",
+    "implementation_cost",
+    "included_users",
+    "additional_user_and_rfc_cost",
+    "maintenance_renewal_cost",
+    "hidden_costs",
+    "tco_1_3_years",
+    "hardware_requirements",
+    "operating_system",
+    "mobile_app_availability",
+    "sales",
+    "purchasing",
+    "inventory_warehouses",
+    "point_of_sale",
+    "crm",
+    "price_lists",
+    "document_bulk_load",
+    "xml_volume_multibranch_capacity",
+    "cfdi_40",
+    "edition_required_for_mx_localization",
+    "timbrado_stamping",
+    "complementos",
+    "addendas",
+    "pac_provider_flexibility",
+    "sat_connection",
+    "extensibility",
+    "sdk_api_integration_tier_gating",
+    "app_marketplace",
+    "technical_support",
+    "community",
+    "documentation",
+    "market_share_installed_base_mx",
+    "api",
+    "ecommerce",
+    "third_party_connectors",
+    "vendor_lock_in_data_portability",
+    "mexico_market_maturity",
+    "learning_curve",
+    "interface"
+  ]
+}

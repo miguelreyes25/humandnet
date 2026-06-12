@@ -1,0 +1,114 @@
+{
+  "id": "contpaqi_comercial_pro",
+  "name": "CONTPAQi Comercial Pro",
+
+  "informacion_basica": {
+    "developer": "CONTPAQi (Computación en Acción, S.A. de C.V.), proveedor de software empresarial 100% mexicano enfocado en soluciones contables, fiscales y administrativas.",
+    "country_of_origin": "México",
+    "current_version": "Comercial Start/Pro line, version 6.x (the Start and Pro editions share a single installer/build family; latest 2025-2026 releases are in the 6.x branch). [uncertain]",
+    "license_model": "Software comercial propietario de código cerrado. Se vende bajo un modelo de suscripción anual (licenciamiento anual); las licencias perpetuas tradicionales se descontinuaron (solo válidas hasta 2018) y CONTPAQi migró su lista de precios 2026 totalmente al esquema anual, separando el precio entre licencia nueva y renovación."
+  },
+
+  "costo_tco": {
+    "license_price": "2026 official list price (MXN, before IVA). Mono-RFC new license: ~$11,290 base for 1 user; renewal ~$9,890. Multi-RFC new license: ~$10,090 base for 1 user; renewal ~$8,890. A lower entry figure of ~$6,190 + IVA is also published by some distributors. [uncertain]",
+    "licensing_scheme": "Suscripción anual. CONTPAQi completó su migración al modelo de licenciamiento anual en la lista de precios 2026 (vigente desde el 2 de enero de 2026), descontinuando las licencias perpetuas tradicionales. El precio separa explícitamente 'licencia nueva' de 'renovación' (renovación anual), con la renovación más barata que una licencia nueva. Los días restantes se acumulan al renovar dentro de la vigencia.",
+    "implementation_cost": "Remote installation is offered free by CONTPAQi/distributors, including initial configuration and post-sale support. Deeper implementation, migration and training are billed separately by the distributor. [uncertain]",
+    "included_users": "1 usuario incluido en la licencia base.",
+    "additional_user_and_rfc_cost": "Additional network user (MXN, before IVA, 2026): Mono-RFC ~$2,690 each; Multi-RFC ~$2,490 each. Multi-RFC handles multiple RFCs; additional RFCs/users can be added only during license validity at extra cost. [uncertain]",
+    "maintenance_renewal_cost": "Annual renewal (MXN, before IVA, 2026): Mono-RFC ~$9,890; Multi-RFC ~$8,890 base, plus per-user renewal. Renewal mandatory to keep the system updated and CFDI-compliant. [uncertain]",
+    "hidden_costs": "Costos adicionales potenciales: capacitación/cursos, contratos extendidos de soporte del distribuidor, timbres del PAC (créditos de timbrado CFDI, facturados aparte/por uso), integración con CONTPAQi Contabilidad (licencia de producto separada), RFC/usuarios adicionales, y la propia renovación anual recurrente. El SDK NO está disponible en Pro, así que cualquier integración programática requiere subir a Premium (un costo de salto de tier).",
+    "tco_1_3_years": "Rough single-user Multi-RFC estimate (MXN, before IVA): Year 1 ~$10,090; Years 2-3 renewals ~$8,890/yr -> ~$27,870 over 3 years for one user. Mono-RFC single user ~$31,070 over 3 years. Add ~$2,490-2,690/yr per extra user. [uncertain]"
+  },
+
+  "despliegue": {
+    "hosting": "On-premise por defecto (instalado en escritorio/servidor Windows, local o multiusuario en LAN). Puede ejecutarse en la nube vía hosting de terceros/distribuidor (p. ej., escritorio remoto / hosting en nube autorizado por CONTPAQi), pero no es un producto SaaS nativo.",
+    "hardware_requirements": "Workstation minimum: Intel/AMD Dual-Core ~3.0 GHz, 8 GB RAM. Server: Dual/Quad-Core ~3.5 GHz, 8 GB RAM, ~500 GB SSD. [uncertain]",
+    "operating_system": "Microsoft Windows only. Requires .NET Framework 4.6.1+ and Microsoft Office 2016 (32-bit)+ for reporting/Excel features. [uncertain]",
+    "mobile_app_availability": "No dedicated native mobile app for Comercial Pro; it is a Windows desktop application. Mobile access only via remote-desktop/cloud workarounds. [uncertain]"
+  },
+
+  "funcionalidad_comercial": {
+    "sales": "Ciclo de venta completo: cotizaciones, pedidos de venta, facturas (CFDI), notas de crédito, devoluciones y complementos de pago (REP). Gestión de vendedores y comisiones por vendedor. Control de cuentas por cobrar con saldos de clientes.",
+    "purchasing": "Ciclo de compra completo: órdenes de compra, documentos de proveedor, cuentas por pagar y control de saldo de proveedores. Costeo de inventario ligado a las compras.",
+    "inventory_warehouses": "Detailed inventory control beyond Start: series, lots, locations, pedimentos, plus costing. The most complete multi-warehouse/multi-company sharing is positioned in Premium. [uncertain]",
+    "point_of_sale": "Point of sale (POS) is available across the Comercial Start/Pro/Premium line. [uncertain]",
+    "crm": "Gestión básica de clientes (clientes, cuentas por cobrar, datos de contacto); sin módulo CRM completo de pipeline de oportunidades. La gestión de relaciones tipo CRM es limitada frente a sistemas CRM dedicados.",
+    "price_lists": "Supports multiple price lists and commercial pricing policies (discounts, customer-specific pricing). [uncertain]",
+    "document_bulk_load": "Pro supports more flexible bulk/mass document import (documents and XML). Notably, Premium is more restrictive on bulk loading because its workflow runs directly from the system, whereas Pro retains more flexible import. [uncertain]",
+    "xml_volume_multibranch_capacity": "Pro handles standard XML volume suitable for SMBs. High XML volume and full multi-company/multisucursal operation with shared catalogs are positioned in Premium, not Pro. [uncertain]"
+  },
+
+  "cumplimiento_fiscal_mx": {
+    "cfdi_40": "Sí. Las versiones actuales soportan la emisión de CFDI 4.0 (facturas, notas de crédito, complementos de pago), alineadas con los requisitos del SAT. La documentación antigua referenciaba CFDI 3.3, pero las versiones mantenidas 2025-2026 son compatibles con CFDI 4.0.",
+    "edition_required_for_mx_localization": "La localización fiscal mexicana (CFDI 4.0, cumplimiento SAT) es nativa y viene integrada en cada tier de pago de CONTPAQi Comercial incluido Pro — no hay un complemento de 'localización' de pago aparte como con los ERP extranjeros; el cumplimiento mexicano es la propuesta de valor central del producto.",
+    "timbrado_stamping": "El timbrado de CFDI se realiza a través del propio ecosistema PAC autorizado de CONTPAQi. CONTPAQi es uno de los principales PAC autorizados por el SAT en México; el timbrado está integrado en el producto. Los créditos de timbres se compran típicamente aparte por uso.",
+    "complementos": "Soporta complementos del SAT incluyendo Carta Porte (3.x — actualmente 3.1) para traslado de mercancías, Pagos/REP (complemento de recibo de pago) y flujos de cancelación, en toda la línea Comercial Start/Pro/Premium.",
+    "addendas": "Supports addendas (commercial-chain custom invoice formats required by large retailers). Available within the Comercial line. [uncertain]",
+    "pac_provider_flexibility": "Tied primarily to CONTPAQi's own PAC ecosystem for stamping rather than freely choosing third-party PACs. Ecosystem lock-in but seamless integration advantage. [uncertain]",
+    "sat_connection": "Native CFDI issuance/cancellation and payment complements. Electronic accounting, DIOT and SAT XML download are handled via the companion CONTPAQi Contabilidad rather than within Comercial Pro itself; Pro exports/integrates to it. [uncertain]"
+  },
+
+  "contabilidad": {
+    "accounting_integration": "Sin módulo contable de mayor (general ledger) completo dentro de Comercial Pro; la contabilidad la maneja el producto separado CONTPAQi Contabilidad. Pro genera los documentos comerciales y alimenta la contabilidad vía integración nativa.",
+    "accounting_handoff_to_contpaqi_contabilidad": "Fuerte ventaja de ecosistema nativo: Comercial Pro se integra directamente con CONTPAQi Contabilidad para generar pólizas automáticamente — con un solo clic desde el documento comercial se pueden crear las pólizas de todas las operaciones comerciales. Este hand-off de pólizas estrecho y automático es un beneficio central de lock-in/ecosistema de permanecer dentro de la suite CONTPAQi."
+  },
+
+  "escalabilidad_modulos": {
+    "available_modules": "Módulos/bloques funcionales en la línea Comercial: ventas, compras, inventario (con series, lotes, ubicaciones, pedimentos, costeo), tesorería, cuentas por cobrar/pagar, listas de precios, comisiones por vendedor, reportes ejecutivos, importación XML, campos extra y seguridad/permisos. Pro se ubica en medio: más que Start (inventario avanzado, más reportes, personalización de procesos, producción básica), por debajo de Premium (multiempresa, proyectos, alto volumen XML, SDK).",
+    "extensibility": "Extensibilidad limitada dentro de Pro: procesos personalizables, campos extra y personalización de reportes, pero SIN acceso a SDK programático. El desarrollo/integración a medida profundo requiere subir a Premium.",
+    "sdk_api_integration_tier_gating": "El acceso al SDK está RESERVADO solo a Premium. CONTPAQi Comercial Pro NO incluye el SDK Comercial; solo el tier Premium expone el SDK usado para integración empresarial y desarrollo a medida avanzado. Es una limitación clave de gating por tier frente a ERP abiertos que exponen APIs en todos los tiers.",
+    "app_marketplace": "No formal public app marketplace like Odoo Apps. Extensions/connectors come through CONTPAQi's distributor channel and third-party developers building on the (Premium-only) SDK. [uncertain]"
+  },
+
+  "soporte_ecosistema": {
+    "technical_support": "Soporte oficial entregado principalmente a través de la red de distribuidores autorizados de CONTPAQi, más un centro de soporte telefónico, materiales de ayuda en línea, video tutoriales y webinars. La instalación remota gratuita y el soporte post-venta inicial están incluidos.",
+    "partner_network": "Amplia red nacional de distribuidores/partners autorizados en todo México (distribuidores máster, niveles Platinum/Oro, etc.), que proveen implementación, capacitación y soporte. Presencia de canal fuerte y madura en todo México.",
+    "community": "Practitioner community of Mexican accountants, distributors and developers; abundant third-party tutorials and some open-source libraries interfacing with the Comercial SDK. Less of a global open-source community than Odoo. [uncertain]",
+    "documentation": "Manuales oficiales, cartas técnicas, tablas comparativas y artículos de base de conocimiento disponibles públicamente en línea (conocimiento.blob.core.windows.net), en español, bien mantenidos.",
+    "market_share_installed_base_mx": "CONTPAQi is one of the dominant administrative/fiscal software vendors in Mexico and the #1 authorized PAC; very large SMB installed base. Exact unit market-share for the Pro tier is not publicly disclosed. [uncertain]"
+  },
+
+  "integraciones": {
+    "api": "No programmatic API/SDK at the Pro tier — reserved for Premium. Pro relies on file/XML import-export and the native CONTPAQi Contabilidad link. [uncertain]",
+    "ecommerce": "No native e-commerce integration in Pro; connectors are typically third-party, often built on the Premium SDK or via XML import. [uncertain]",
+    "third_party_connectors": "Connectors to other CONTPAQi products (Contabilidad, Nóminas, Bancos) are native; broader third-party connectors generally require the Premium SDK or distributor tools. [uncertain]"
+  },
+
+  "estrategico": {
+    "vendor_lock_in_data_portability": "Lock-in significativo con el proveedor: formato propietario y cerrado; suscripción anual requerida para mantener el sistema operativo y en cumplimiento; timbrado atado al ecosistema PAC de CONTPAQi; acoplamiento estrecho con CONTPAQi Contabilidad. Los datos pueden exportarse (XML/reportes/Excel) pero no hay base de datos/código abierto. Migrar fuera es no trivial frente a un ERP open-source. Cambiar a una integración más rica también obliga a subir a Premium (lock-in intra-ecosistema).",
+    "mexico_market_maturity": "Madurez extremadamente alta para el mercado mexicano — construido a propósito para los requisitos fiscales/CFDI/SAT mexicanos, actualizado continuamente ante cambios regulatorios (CFDI 4.0, Carta Porte 3.1, etc.). Es su diferenciador más fuerte frente a ERP genéricos/globales."
+  },
+
+  "usabilidad": {
+    "learning_curve": "Moderate and familiar to Mexican accountants/administrators; Windows-style desktop UI consistent across the CONTPAQi suite. Pro is more complex than Start due to advanced inventory and reporting. [uncertain]",
+    "interface": "Traditional Windows desktop interface (form/grid-based) rather than a modern web UI; consistent with other CONTPAQi products but dated versus web-based ERPs like Odoo. [uncertain]"
+  },
+
+  "uncertain": [
+    "current_version",
+    "license_price",
+    "implementation_cost",
+    "additional_user_and_rfc_cost",
+    "maintenance_renewal_cost",
+    "tco_1_3_years",
+    "hardware_requirements",
+    "operating_system",
+    "mobile_app_availability",
+    "inventory_warehouses",
+    "point_of_sale",
+    "price_lists",
+    "document_bulk_load",
+    "xml_volume_multibranch_capacity",
+    "addendas",
+    "pac_provider_flexibility",
+    "sat_connection",
+    "app_marketplace",
+    "community",
+    "market_share_installed_base_mx",
+    "api",
+    "ecommerce",
+    "third_party_connectors",
+    "learning_curve",
+    "interface"
+  ]
+}
