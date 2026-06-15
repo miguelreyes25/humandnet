@@ -60,7 +60,7 @@
   });
 
   /* ---------- Generic reveals on scroll (one-shot) ---------- */
-  document.querySelectorAll('[data-reveal]').forEach(function (el) {
+  document.querySelectorAll('[data-reveal]:not(.card)').forEach(function (el) {
     gsap.to(el, {
       opacity: 1, y: 0, duration: 0.7, ease: 'power3.out',
       scrollTrigger: { trigger: el, start: 'top 85%', once: true }
