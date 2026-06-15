@@ -171,9 +171,9 @@ section{position:relative;z-index:1;}
 
 .trust-row{display:flex;align-items:center;gap:16px;font-size:13px;color:#cbd5e1;font-weight:500;}
 .trust-sep{width:1px;height:16px;background:var(--line);}
-.contpaqi-badge{height:62px;width:auto;}
+.contpaqi-badge{height:81px;width:auto;}
 .badge-fallback{display:none;align-items:center;}
-.footer-badge{height:78px;margin-top:18px;}
+.footer-badge{height:101px;margin-bottom:16px;}
 
 /* Ampersand */
 .amp-stage{
@@ -232,14 +232,16 @@ section{position:relative;z-index:1;}
 }
 .cards-4{grid-template-columns:repeat(2,1fr);}
 .card-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
-.card-tags span{
+.card-tags span,.card-tags a{
   font-size:12px;font-weight:600;
   background:rgba(255,255,255,0.05);
   border:1px solid rgba(255,255,255,0.1);
   border-radius:99px;padding:4px 12px;color:#94a3b8;
-  transition:border-color .2s,color .2s;
+  transition:border-color .2s,color .2s,background .2s;
+  text-decoration:none;cursor:pointer;
 }
-.card:hover .card-tags span{border-color:rgba(0,188,212,0.25);color:#e2e8f0;}
+.card-tags a:hover{border-color:rgba(233,30,99,0.5);color:#E91E63;background:rgba(233,30,99,0.08);}
+.card:hover .card-tags span,.card:hover .card-tags a{border-color:rgba(0,188,212,0.25);color:#e2e8f0;}
 .card{
   position:relative;overflow:hidden;
   background:rgba(255,255,255,0.03);
