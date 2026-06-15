@@ -400,3 +400,7 @@ section{position:relative;z-index:1;}
   [data-reveal],[data-reveal-left],[data-reveal-right]{opacity:1!important;transform:none!important;}
   html{scroll-behavior:auto;}
 }
+
+/* ---------- Stats icons ---------- */
+.stat-icon{display:flex;justify-content:center;margin-bottom:14px;}
+.stat-icon svg{display:block;}
