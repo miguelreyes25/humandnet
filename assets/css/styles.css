@@ -444,6 +444,21 @@ section{position:relative;z-index:1;}
   .marquee-inner{animation:none!important;}
 }
 
+/* ---------- ¿Por qué Hum&Net? ---------- */
+.porque{padding:90px 32px;background:radial-gradient(ellipse at 50% 100%,rgba(0,188,212,0.06),transparent 60%);}
+.porque-cards{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.porque-card{text-align:center;background:rgba(255,255,255,0.03);border:1px solid var(--line);border-radius:18px;padding:36px 24px;transition:transform .25s,border-color .25s,box-shadow .25s;}
+.porque-card:hover{transform:translateY(-6px);border-color:rgba(0,188,212,0.25);box-shadow:0 16px 40px rgba(0,0,0,0.35);}
+.porque-icon{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;}
+.porque-icon-1{background:rgba(233,30,99,0.12);}
+.porque-icon-2{background:rgba(255,152,0,0.12);}
+.porque-icon-3{background:rgba(0,188,212,0.12);}
+.porque-icon-4{background:rgba(233,30,99,0.12);}
+.porque-card h3{font-family:'Inter Tight';font-size:18px;font-weight:700;margin-bottom:10px;line-height:1.3;}
+.porque-card p{color:var(--ink);font-size:14px;line-height:1.6;}
+@media(max-width:1024px){.porque-cards{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:768px){.porque-cards{grid-template-columns:1fr;}}
+
 /* ---------- Servicios — featured layout ---------- */
 .cards-featured{grid-template-columns:repeat(3,1fr);}
 .card-featured{
