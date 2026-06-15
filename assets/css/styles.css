@@ -424,13 +424,8 @@ section{position:relative;z-index:1;}
 }
 .marquee-inner:hover{animation-play-state:paused;}
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.client-logo{
-  height:48px;width:auto;max-width:140px;object-fit:contain;
-  filter:grayscale(1) opacity(0.55);
-  transition:filter .3s;
-  flex-shrink:0;
-}
-.client-logo:hover{filter:none;}
+.client-logo{height:60px;width:auto;max-width:175px;object-fit:contain;background:#fff;border-radius:8px;padding:10px 18px;flex-shrink:0;transition:transform .3s,box-shadow .3s;box-shadow:0 2px 8px rgba(0,0,0,0.08);}
+.client-logo:hover{transform:scale(1.06);box-shadow:0 6px 20px rgba(0,0,0,0.15);}
 .client-logo-placeholder{
   height:48px;min-width:120px;
   display:flex;align-items:center;justify-content:center;
