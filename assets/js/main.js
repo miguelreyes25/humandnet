@@ -122,4 +122,19 @@
       }
     });
   }
+
+  var ctaForm = document.querySelector('.cta-form');
+  if (ctaForm) {
+    ctaForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var nameEl = ctaForm.querySelector('[aria-label="Nombre"]');
+      var emailEl = ctaForm.querySelector('[aria-label="Correo electrónico"]');
+      var name = nameEl ? nameEl.value.trim() : '';
+      var email = emailEl ? emailEl.value.trim() : '';
+      if (!name || !email) return;
+      var subject = encodeURIComponent('Demo request — ' + name);
+      var body = encodeURIComponent('Nombre: ' + name + '\nEmail: ' + email + '\n\nMe interesa agendar una demo de Hôlos ERP® / CONTPAQi®.');
+      window.location.href = 'mailto:ventas@humandnet.com?subject=' + subject + '&body=' + body;
+    });
+  }
 })();
