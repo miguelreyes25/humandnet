@@ -13,8 +13,10 @@
     if (window.scrollY > 20) nav.classList.add('scrolled');
     else nav.classList.remove('scrolled');
   }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  if (nav) {
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
 
   if (toggle && links) {
     toggle.addEventListener('click', function () {
